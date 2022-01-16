@@ -20,11 +20,18 @@ public class UserRegistration {
 		public boolean validateLastName(String lastName) {
 			isLastNameValid= Pattern.matches(LAST_NAME_REGEX, lastName);
 			if(!isLastNameValid) {
-				System.out.println("Last Name is invalid...Please enter proper last name");
+				System.out.println("Please enter valid Last Name");
 				System.exit(0);
 			}
 			return Pattern.matches(LAST_NAME_REGEX, lastName);
 		}
 		
-
+		public boolean validateEmail(String email) {
+			isMailValid= Pattern.matches(EMAIL_REGEX, email);
+			if(!isMailValid) {
+				System.out.println("Please enter valid e-mail");
+				System.exit(0);
+			}
+			return Pattern.matches(EMAIL_REGEX, email);
+		}
 }	
