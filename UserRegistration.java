@@ -17,4 +17,14 @@ public class UserRegistration {
 		}
 		return isFirstNameValid;
 	}
+		public boolean validateLastName(String lastName) {
+			isLastNameValid= Pattern.matches(LAST_NAME_REGEX, lastName);
+			if(!isLastNameValid) {
+				System.out.println("Last Name is invalid...Please enter proper last name");
+				System.exit(0);
+			}
+			return Pattern.matches(LAST_NAME_REGEX, lastName);
+		}
+		
+
 }	
