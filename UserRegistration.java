@@ -51,4 +51,10 @@ public class UserRegistration {
 			return Pattern.matches(PASSWORD_REGEX, password);
 		}			
 
+		public void register() {
+			if(isFirstNameValid && isLastNameValid && isMailValid && isNumberValid & isPasswordValid) {
+				System.out.println("You are registered!!!");
+				System.out.println("Welcome");
+			}
+		}
 }	
