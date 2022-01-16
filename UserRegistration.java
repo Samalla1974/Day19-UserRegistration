@@ -34,4 +34,13 @@ public class UserRegistration {
 			}
 			return Pattern.matches(EMAIL_REGEX, email);
 		}
+		public boolean validatePhoneNumber(String phoneNumber) {
+			isNumberValid= Pattern.matches(PHONE_NUMBER_REGEX, phoneNumber);
+			if(!isNumberValid) {
+				System.out.println("Please enter valid phone-number");
+				System.exit(0);
+			}
+			return Pattern.matches(PHONE_NUMBER_REGEX, phoneNumber);
+		}
+
 }	
