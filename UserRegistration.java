@@ -42,5 +42,13 @@ public class UserRegistration {
 			}
 			return Pattern.matches(PHONE_NUMBER_REGEX, phoneNumber);
 		}
+		public boolean validatePassword(String password) {
+			isPasswordValid= Pattern.matches(PASSWORD_REGEX, password);
+			if(!isPasswordValid) {
+				System.out.println("Please enter a valid  password");
+				System.exit(0);
+			}
+			return Pattern.matches(PASSWORD_REGEX, password);
+		}			
 
 }	
